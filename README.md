@@ -5,7 +5,7 @@ This repo contains lectures, labs, and other materials for 6 week introductory P
 - have online examples the show their ability to navigate, comment on, document, and share code.
 
 ## Required Software / Web Applications
-This class uses Python 3.x for coding, Jupyter notebooks – specifically Google Colaboratory – for demonstrations and lectures, and Github for submitting code work. I have found that using Google Colaboratory (or “Colab”) greatly reduces the frustration of relying on University IT maintenance and labs. The downside is that it requires good connectivity.
+This class uses Python 3.x for coding, [Jupyter notebooks(https://jupyter.org/) – specifically [Google Colaboratory](https://colab.research.google.com/) – for demonstrations and lectures, and Github for submitting code work. I have found that using Google Colaboratory (or “Colab”) greatly reduces the frustration of relying on University IT maintenance and labs since the coding is done via browser and everything is run on Google servers. The downside is that it requires good connectivity.
 
 So, although all of the activities here can be done in-browser, I strongly encourage students to use a code editor (I use [Atom](https://atom.io) but my course assistant prefers [PyCharm’s community edition](https://www.jetbrains.com/pycharm/download)) and [Github desktop](https://desktop.github.com) to work offline so they don't lose work due to connectivity issues. There are a myriad of ways to set up a local Python environment for students: I have found [Anaconda](https://www.anaconda.com/products/individual) to be relatively straight forward.
 
