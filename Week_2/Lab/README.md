@@ -26,6 +26,6 @@ Start by writing your script to include variables and values for the length, wid
 
 Finally, make sure that the script will print out the following text, along with the values you used. It should look something like this:
 > plot_length is: ____ (whatever values you used)
-plot_width is: ____ (whatever values you used)
-rainfall_inches is: ____ (whatever values you used)
-runoff_gallons is: ____ (whatever values you used)
+> plot_width is: ____ (whatever values you used)
+> rainfall_inches is: ____ (whatever values you used)
+> runoff_gallons is: ____ (whatever values you used)

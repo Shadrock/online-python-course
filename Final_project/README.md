@@ -1,5 +1,10 @@
 # Final Project
-The final project will require you to complete two Python scripts (including comment codes within the script) a short 600 – 800 word write up about both scripts, and delivery via a Github repository. You should submit a short (100 – 150 word) description of the script you plan to, which I’ll approve by the next day. Once you’re are approved: start coding!
+The final project will require you to complete:
+- two Python scripts (including comment codes within the script),
+- a short 600 – 800 word write up about both scripts, and
+- delivery via a Github repository.
+
+Script 1 will be like a lab: you will receive a script and instructions about how to modify it. Script 2 will be something you develop on your own. You should submit a short (100 – 150 word) description of the script you plan to develop for script 2, which I’ll approve by the next day. Once you’re are approved: start coding!
 
 **Documentation is absolutely critical:** you should have a clear comment block at the top of all scripts with author, date, Python version, input/output information as well as several comments within your code to explain what each part of it does.
 
@@ -13,6 +18,7 @@ If you are completely stuck about the kind of script you want to write: start by
 
 ## Details about the write up:
 Your write up should clearly and succinctly describe __both__ scripts.
+
 **Script 1:**, you can explain the purpose of the script, how well it functioned (or if it didn’t), and whether or not you might use something like this in the future.
 
 **Script 2:** clearly explain what the goal of the script is; what inputs are required; what outputs are expected. Ideally, you’d have a real-life scenario in hand (e.g. “by allowing user input for the script to _______, we ensure that it can be easily run without a user needing to program in Python.”). That is only an example but should give you an idea for what I’m looking for. Additionally, you should describe the process of writing the script: was it easy, hard, what challenges or errors did you face and how did you resolve the issue? If you use any resources to help write your code (e.g. Stackoverflow.com; the text book; etc.) then please describe these in the body of the text. E.g. “After repeated syntax errors, I checked Stackoverflow.com to find that…”  Use Markdown to format your text and link to a specific online resources that you used.
