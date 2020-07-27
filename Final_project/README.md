@@ -10,6 +10,7 @@ Script 1 will be like a lab: you will receive a script and instructions about ho
 
 ## Details on the scripts:
 **Script 1:** This will be similar to a lab and you will be given instructions to follow along and modify the script to get a particular result.
+
 **Script 2:** This will be a script you choose to (re)create. If you have a project that you’d like to try or something that you want to try, now is the time to try and write some code for it! Previous students have tried using natural language processing tools to count the occurrences of work in a given body of text.
 
 If you don’t have a particular topic you want to pursue, you can identify one of the previous labs, or choose an exercise presented in the textbook, and re-write the code using what you have learned in class (or perhaps even outside of class) to accomplish a slightly different task. For example, we had a lab to calculate rainwater run-off. You might want to re-write this lab to accept user input for the values required to calculate something else.
