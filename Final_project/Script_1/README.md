@@ -24,4 +24,4 @@ Edit the `NWS_WeatherForecast.py` script to add the following functionality:
 
 4.	Convert the final output to uppercase.
 
-Remember to update the `Script1.py` file to include comments and documentation in your script to tell me what it’s doing!
+Remember to update the `NWS_WeatherForecast.py` file to include comments and documentation in your script to tell me what it’s doing!
