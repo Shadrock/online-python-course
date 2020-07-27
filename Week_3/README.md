@@ -8,4 +8,4 @@ See the `Lecture_jupyter_notebooks` folder for code along notebook lectures and 
 - Chapter 6,  [Fruitful Functions](http://greenteapress.com/thinkpython2/html/thinkpython2007.html)
 
 ## Lab
-This week contains a lab assignment (see folder)
+This week contains a lab assignment (see folder) using `if/elif/else` to classify data. 
