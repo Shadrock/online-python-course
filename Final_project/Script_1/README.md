@@ -2,7 +2,7 @@
 
 In this lab, you will work with a script that scrapes the 5-day weather forecast from the National Weather Service website. The script extracts information from multiple elements listed under the same class name using the BeautifulSoup library.
 
-- Copy the **NWS_WeatherForecast.py** file and paste the code it contains into your code editor or Colab.
+- Copy the `NWS_WeatherForecast.py` file and paste the code it contains into your code editor or Colab.
 
 - Read the description and comments in the script to understand the purpose of the script
 
