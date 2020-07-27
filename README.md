@@ -12,7 +12,7 @@ So, although all of the activities here can be done in-browser, I strongly encou
 I recommend instructors survey their students before class to ensure their computing environment and connectivity won’t pose any problems. The end of this README provides links to sample survey questions and a Google form that you can copy and adapt for this purpose.
 
 **To complete these activities students will need:**
-- a Github account (I recommend [the student developer pack](https://education.github.com/pack)) for hosting web pages and sharing code,
+- a Github account (I recommend [the student developer pack](https://education.github.com/pack)) for receiving assignments and sharing code,
 - a [Google account](https://www.google.com), and
 - a version of Python 3 running locally in the event that they cannot access Colab.
 
@@ -42,4 +42,4 @@ Please familiarize yourself with the relevant national, state, and institutional
 ## References / Citations / Credits
 These activities were created as part of my “Introduction to Python” and “Introduction to Computer Programming for GIS” courses at Clark University’s [Department of International Development, Community, and Environment](https://www.clarku.edu/schools/idce/). My course assistant [Priyanka Verma](https://github.com/verma-priyanka/) also contributed heavily to these materials and did a phenomenal job of helping me streamline a workflow for delivering the course. As stated, the course relies heavily on work by [Allen Downey]( https://github.com/AllenDowney). Additional readings are linked within each week’s repo. All links work as of 16 July 2020, but should be checked periodically.
 
-The [license for this repo is CC-BY-SA-4.0](https://github.com/Shadrock/online-python-course/blob/master/LICENSE.md), so feel free to use or adapt all of this material in your class or training program! Please contribute via pull request or get in touch with me at shadrock.roberts@gmail.com. Future updates to this repo will include activities using Carto and understanding OpenStreetMap as both contributor and user.
+The [license for this repo is CC-BY-SA-4.0](https://github.com/Shadrock/online-python-course/blob/master/LICENSE.md), so feel free to use or adapt all of this material in your class or training program! Please contribute via pull request or get in touch with me at shadrock.roberts@gmail.com.
