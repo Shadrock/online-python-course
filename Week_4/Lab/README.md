@@ -20,10 +20,12 @@ In this lab, you will work with a script that extracts live weather conditions f
 1. Read the description and comments in the script to understand the purpose of the script and how it works.
 2. Run the script. You will see some packages being installed in the compiler window when you run it for the first time.  The script returns the current weather conditions for Worcester, MA (Lat: 42.2634, Lon: -71.8022) with the latitude and longitude information provided in the script. Using the latitude and longitude values, it generates the following URL through string concatenation: https://forecast.weather.gov/MapClick.php?lat=42.2634&lon=-71.8022
 3. Open this URL in a Firefox or Chrome web browser. Locate the information that is being outputted in our script. Right-click on this and select the Inspect Element option.
-(((insert image 1)))
+![](images/image1.png)
+
 This will launch the Inspector window that helps locate different elements on the page
-(((insert image 2)))
-4. Locate the current_conditions-summary 'id' tag on the page.
+
+![](images/image2.png)
+4. Locate the current_conditions-summary `id` tag on the page.
 
 The script returns the current weather conditions for Worcester, MA (Lat: 42.2634, Lon: -71.8022) with the latitude and longitude information provided in the script. Using the latitude and longitude values, it generates the following URL through string concatenation: https://forecast.weather.gov/MapClick.php?lat=42.2634&lon=-71.8022
 
