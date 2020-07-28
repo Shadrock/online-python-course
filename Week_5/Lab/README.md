@@ -30,9 +30,13 @@ Note: there is a method called "capitalize." The syntax for it is `'macdonald'.c
 `exercise2.py` scrapes the National Weather Service website to produce a multiline string (seen below) using string manipulation techniques.
 
 > Tonight: Clear, Low: 55 F
+>
 > Thursday: Sunny then Chance Showers, High: 77 F
+> 
 > Friday: Sunny, High: 73 F
+> 
 > Saturday: Mostly Sunny, High: 77 F
+> 
 > Sunday: Mostly Sunny, High: 71 F
 
 Write code to extract the latitude and longitude from the URL in `exercise3.py`. Output should be text that reads:
