@@ -1,6 +1,6 @@
 # Final Project: Web-scraping Weather Forecast with Python (Script 1)
 
-In this lab, you will work with a script that scrapes the 5-day weather forecast from the National Weather Service website. The script extracts information from multiple elements listed under the same class name using the BeautifulSoup library.
+In this lab, you will work with a script that scrapes the 5-day weather forecast from the National Weather Service website. The script extracts information from multiple elements listed under the same class name using the [Beautiful Soup library](https://www.crummy.com/software/BeautifulSoup/bs4/doc/).
 
 - Copy the `NWS_WeatherForecast.py` file and paste the code it contains into your code editor or Colab.
 
