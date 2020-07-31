@@ -14,7 +14,7 @@ In this lab, you will work with a script that scrapes the 5-day weather forecast
 
 - Notice that all forecast containers in this section are located in the _`forecast-tombstone`_ class inside the _`li`_ tag. In order to scrape multiple elements listed under the same class name, we utilize the `findAll()` function from BeautifulSoup. The tag and class names are required arguments for this function.
 
-### Editing the Script1
+### Editing Script 1
 Edit the `NWS_WeatherForecast.py` script to add the following functionality:
 1. Take latitude and longitude values as inputs in decimal degrees from a user.
 
