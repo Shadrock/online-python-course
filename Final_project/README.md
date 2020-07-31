@@ -26,6 +26,6 @@ Your write up should clearly and succinctly describe __both__ scripts.
 Remember: when this project is complete, we can transfer ownership of this repo to you so it will appear in your Github account and be something you can use to demonstrate your technical ability coming out of this class: so make this count!
 
 ## Important Dates / Steps
-Your write up should clearly and succinctly
+
 - _INSTRUCTOR TO CHOOSE DATE AS APPROPRIATE_: Submit your 100 – 150 word proposal about what you will do for script 2.
 - _INSTRUCTOR TO CHOOSE DATE AS APPROPRIATE_: your code must be delivered.
