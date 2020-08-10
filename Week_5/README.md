@@ -1,12 +1,16 @@
 # Week 5 Content
-This wee introduces data structures, with a focus on lists and dictionaries. While lectures and code along sessions focus on slicing, dicing, traversing, and generally manipulating lists and dictionaries I try to spend some time talking about the importance of understanding different data structures for different uses. I also touch on metadata and reinforce earlier talking points about commenting code, creating good file variable names, etc.
+This week continues with data structures, with a focus on dictionaries. I also touch on tuples, but because they are much less common at this stage of coding, the focus of lectures and code along sessions is slicing, dicing, traversing, and general manipulation techniques with dictionaries.
 
-See the `Lecture_jupyter_notebooks` folder for code along notebook lectures and the `Lecture_slides` folder for .pdf versions of the PowerPoints I gave (you’ll need to adapt these for yourself since a lot of the international development / humanitarian examples are pulled straight from my professional experience). 
+>>>INTRODUCE KE COUNTIES COLAB.
+
+See the `Lecture_jupyter_notebooks` folder for code along notebook lectures and the `Lecture_slides` folder for .pdf versions of the PowerPoints I gave (you’ll need to adapt these for yourself since a lot of the international development / humanitarian examples are pulled straight from my professional experience).
 
 **Readings for the week**
-- Chapter 9, [Case study: word play](http://greenteapress.com/thinkpython2/html/thinkpython2010.html). I really focus on the debugging section.
-- Chapter 10,  [Lists](http://greenteapress.com/thinkpython2/html/thinkpython2011.html)
 - Chapter 11,  [Dictionaries](http://greenteapress.com/thinkpython2/html/thinkpython2012.html)
+- Chapter 12, [Tuples](http://greenteapress.com/thinkpython2/html/thinkpython2013.html)
+- Chapter 13, [Case study: data structure selection](http://greenteapress.com/thinkpython2/html/thinkpython2014.html) – I haven’t lectured on this yet, but realized last year that I needed to include more on data structures.
 
-## Lab
-This week’s lab using string manipulation to generate outputs in desired formats. The lab builds on the previous lab’s use of web scraping.  
+## Lab / Assignments
+This week’s lab builds a basic dictionary and traverses it to output some basic, human readable, outputs.
+
+>>>INTRODUCE KE COUNTIES COLAB.

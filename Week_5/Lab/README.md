@@ -1,11 +1,11 @@
-# Lab 4 – String Manipulation
+# Lab 5 – Refugee Stats using Dictionaries
 To complete this lab you will need to add a `.py` script that contains your code (be sure it is well commented!) and edit this README file.
 
 You can write your script using whatever tolls you like, but it must include a comment block at the top with the following information:
 - Name:
 - Date created:
 - Version of Python you are using
-- Very brief description of the assignment or the assignment name. Include inputs and outputs.
+- Very brief description of the assignment or the assignment name. Include inputs and outputs. 
 
 You should edit your README file to provide the following information:
 - Summarize what your script does or the problem you were trying to solve.
@@ -15,32 +15,12 @@ You should edit your README file to provide the following information:
 Remember that you are encouraged to look for answers online! Stackoverflow, other Github repositories, or Python documentation are all good places to start.
 
 ## The Code
-This week there are three short scripts: one to capitalize portions of a string, one to parse and manipulate a multiline string, and one to extract a portion of a string and return in a way that is more understandable. This week there are three starter scripts included with this repo: edit them as needed to do the following:
+This week you will create a small dictionary of Refugee and iterate through it to create basic outputs.  
 
-**Part 1**
-Edit `exercise1.py` to write a function that capitalizes the first and fourth letters of a name. In this example, the function is called “old_macdonald” and takes a string for an argument.
+1. Review the data table located under the Refugee camps by country and population section: https://en.wikipedia.org/wiki/Refugee_camp
+2. Create a dictionary with 5 key-value pairs consisting of a country name and an integer that represents the number of refugees in refugee camps in the selected country, for a year of your choice. The dictionary should represent country names as keys and the population as values.
+3. Define a function that will print out just the countries' names, by looping through the keys of your dictionary.
+4. Define a function that will print out just the populations, by looping through the values of your dictionary.
+5. Print out a series of statements telling how many refugees are in each country: "CountryX has 1234567 refugees."
 
-For example, running the function as `old_macdonald('macdonald')` would produce `MacDonald` as its output.
-
-Add your code to exercise1.py
-
-Note: there is a method called "capitalize." The syntax for it is `'macdonald'.capitalize()` and, in this example, it returns 'Macdonald'
-
-**Part 2**
-`exercise2.py` scrapes the National Weather Service website to produce a multiline string (seen below) using string manipulation techniques.
-
-> Tonight: Clear, Low: 55 F
->
-> Thursday: Sunny then Chance Showers, High: 77 F
-> 
-> Friday: Sunny, High: 73 F
-> 
-> Saturday: Mostly Sunny, High: 77 F
-> 
-> Sunday: Mostly Sunny, High: 71 F
-
-Write code to extract the latitude and longitude from the URL in `exercise3.py`. Output should be text that reads:
-Latitude: 42.2509428
-Longitude: -71.8249939
-
-Remember to update the existing header in the Python files. Be sure to include comments and documentation in your script to tell me what it’s doing!
+Revise your output, if necessary. Make sure there is an introductory sentence or comment describing the output for each loop you write.

@@ -1,4 +1,4 @@
-# Lab 2 – Data Classification
+# Lab 3 – Web Scraping Weather Data
 To complete this lab you will need to add a `.py` script that contains your code (be sure it is well commented!) and edit this README file.
 
 You can write your script using whatever tolls you like, but it must include a comment block at the top with the following information:
@@ -15,13 +15,20 @@ You should edit your README file to provide the following information:
 Remember that you are encouraged to look for answers online! Stackoverflow, other Github repositories, or Python documentation are all good places to start.
 
 ## The Code
-You will a function, called “feelTemp”, that converts a given temperature (in Fahrenheit) into four categorical levels, hot, warm, cool, and cold using the following criteria:
+In this lab, you will work with a script that extracts live weather conditions from the National Weather Service website for a given location in the United States. The script, `weather-scraping.py` is included in this repo.
 
-- If the temperature is 100 or above, the functions return “It is hot.”;
-- If the temperature is between 70 and 100, the function returns “It is warm.”;
-- If the temperature is between 32 and 70, the functions return “It is cool.”;
-- If the temperature is below 32, it returns “It is cold.”
+1. Read the description and comments in the script to understand the purpose of the script and how it works.
+2. Run the script. You will see some packages being installed in the compiler window when you run it for the first time.  The script returns the current weather conditions for Worcester, MA (Lat: 42.2634, Lon: -71.8022) with the latitude and longitude information provided in the script. Using the latitude and longitude values, it generates the following URL through string concatenation: https://forecast.weather.gov/MapClick.php?lat=42.2634&lon=-71.8022
+3. Open this URL in a Firefox or Chrome web browser. Locate the information that is being outputted in our script. Right-click on this and select the Inspect Element option.
+![](images/image1.png)
 
-The function feelTemp will take one value for the temperature, and then returns a category as a string. When running the program, the user is prompted to input a temperature, then the program prints one of the four categorical levels (hot, warm, cool, and cold) that the given temperature falls into.
+This will launch the Inspector window that helps locate different elements on the page
 
-Use `if/elif/else` structure to classify the input numerical values into one of the four categories; use the input to get input from the keyboard. Be sure to include comments and documentation in your script to tell me what it’s doing!
+![](images/image2.png)
+4. Locate the current_conditions-summary `id` tag on the page.
+
+The script returns the current weather conditions for Worcester, MA (Lat: 42.2634, Lon: -71.8022) with the latitude and longitude information provided in the script. Using the latitude and longitude values, it generates the following URL through string concatenation: https://forecast.weather.gov/MapClick.php?lat=42.2634&lon=-71.8022
+
+**Edit the Web Scrapping script to do the following:**
+- Edit the `lat` and `lon` variables with latitude and longitude (in decimal degrees) for a city of your choice. Note that the city must be located in the United States. If latitude/longitude for a city that is outside the U.S. is specified, the page will return an error. You can find the latitude and longitude for a place of interest through this online geocoder: https://www.latlong.net/
+- In the web-page, find the `id` element that contains the Humidity, Wind Speed, Barometer, Dewpoint, Visibility and Last Updated information. Edit line #35 in the script to scrape this `id` element. The final output for the script should include the Humidity, Wind Speed, Barometer, Dewpoint, Visibility and Last Updated information for the selected city.
