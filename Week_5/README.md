@@ -12,4 +12,4 @@ See the `Lecture_jupyter_notebooks` folder for code along notebook lectures and 
 This week’s lab builds a basic dictionary and traverses it to output some basic, human readable, outputs.
 
 **Additional Assignments**
-I like to introduce some more complex coding assignments towards the end of the semester and have prepared two Notebooks in the "Analyzing a Survey" folder. This week I release `Kenya_Counties_survey`, which has students process a `.txt` file and deliver a series of outputs. Next week I will release the `Kenya_Counties_create_charts` Notebook, which builds on the processing done this week. 
+I like to introduce some more complex coding assignments towards the end of the semester and have prepared two Notebooks in the "[Analyzing a Survey](https://github.com/Shadrock/online-python-course/tree/master/Analyzing_a_Survey_Assignment)" folder. This week I release `Kenya_Counties_survey`, which has students process a `.txt` file and deliver a series of outputs. Next week I will release the `Kenya_Counties_create_charts` Notebook, which builds on the processing done this week. 
