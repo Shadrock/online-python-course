@@ -13,4 +13,4 @@ There are no further `Lecture_jupyter_notebooks` notebook lectures.
 There is no lab this week to give students extra time to finish their final project.
 
 **Additional Assignments**
-I like to introduce some more complex coding assignments towards the end of the semester and have prepared two Notebooks in the "Analyzing a Survey" folder. This week I release the `Kenya_Counties_create_charts` Notebook, which builds on the processing done last week in the `Kenya_Counties_survey`. The notebook this week introduces [Matplotlib](https://matplotlib.org/) to produce graphical charts.  
+I like to introduce some more complex coding assignments towards the end of the semester and have prepared two Notebooks in the ""[Analyzing a Survey](https://github.com/Shadrock/online-python-course/tree/master/Analyzing_a_Survey_Assignment)"" folder. This week I release the `Kenya_Counties_create_charts` Notebook, which builds on the processing done last week in the `Kenya_Counties_survey`. The notebook this week introduces [Matplotlib](https://matplotlib.org/) to produce graphical charts.  
