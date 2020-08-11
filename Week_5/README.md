@@ -6,7 +6,7 @@ See the `Lecture_jupyter_notebooks` folder for code along notebook lectures and 
 **Readings for the week**
 - Chapter 11,  [Dictionaries](http://greenteapress.com/thinkpython2/html/thinkpython2012.html)
 - Chapter 12, [Tuples](http://greenteapress.com/thinkpython2/html/thinkpython2013.html)
-- Chapter 13, [Case study: data structure selection](http://greenteapress.com/thinkpython2/html/thinkpython2014.html) – I haven’t lectured on this yet, but realized last year that I needed to include more on data structures.
+- Chapter 13, [Case study: data structure selection](http://greenteapress.com/thinkpython2/html/thinkpython2014.html) – I haven’t lectured on this yet, but realized last year that I needed to include more on data structures. To this end, I've created an additional Colab notebook called `302_Summary_Python_Data_structures` in the `Lecture_jupyter_notebooks` folder. This can be used as a code along, or simply given to students as a practice sheet to better understand lists and dictionaries. 
 
 ## Lab / Assignments
 This week’s lab builds a basic dictionary and traverses it to output some basic, human readable, outputs.
