@@ -101,7 +101,7 @@ print(count)
 Rewrite the code above as a function where you specify an argument with the name of the county you want to count votes for, and the function returns the number of votes for that particular county. Your code should be well commented to explain what the different parts of the code are doing.
 
 # **Counting All the Votes**
-Counting votes for each county is a bit time consuming, you have to know all the names in advance and you have to loop through the file multiple times. How about if you could automatically find all the varieties that were voted for, and count them all in one pass?
+Counting votes for each county is a bit time consuming, you have to know all the names in advance and you have to loop through the file multiple times. How about if you could automatically find all the counties that were voted for, and count them all in one pass?
 
 You’ll need a data structure where you can associate a county name with the number of votes counted for it. A dictionary would be perfect!
 
