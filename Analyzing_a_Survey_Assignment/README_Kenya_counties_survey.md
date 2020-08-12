@@ -7,11 +7,11 @@ ___
 1. Ongoing programs are deemed critical and
 2. there remain significant resources in terms of local funding, volunteer support, etc.
 
-In an effort to be completely transparent, the head of your organization has asked each staff member working on programs to consider these paramaters and vote for the *one* county in which operations should continue. Each person gets one vote.
+In an effort to be completely transparent, the head of your organization has asked each staff member working on programs to consider these parameters and vote for the *one* county in which operations should continue. Each person gets one vote.
 
-As the GIS analyst for this organiztaion, you're tasked with developing some different ways to explore and communicate the results.
+As the GIS analyst for this organization, you're tasked with developing some different ways to explore and communicate the results.
 
-This doesn't sound like a very complicated job, but you go to a few planning meetings anyways and are *assured* that the survey is being structred well and that it will be very easy for you to manipulate. Everyone seems very confident that they understand "data structure", "file format", and "transcription errors" (if you don't know the [last one](https://en.wikipedia.org/wiki/Transcription_error), you should look it up).
+This doesn't sound like a very complicated job, but you go to a few planning meetings anyways and are *assured* that the survey is being structured well and that it will be very easy for you to manipulate. Everyone seems very confident that they understand "data structure", "file format", and "transcription errors" (if you don't know the [last one](https://en.wikipedia.org/wiki/Transcription_error), you should look it up).
 
 Of course, none of this happens as planned and when you do receive the final survey it is in the form of a `.txt` file that is formatted as a name, a hyphen, and a prefered county to work in. Example: `Shadrock Roberts - Nairobi County`.
 
