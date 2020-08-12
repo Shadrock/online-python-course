@@ -1,5 +1,5 @@
 # Online Introductory Python Course Materials
-This repo contains lectures, labs, and other materials for 6 week introductory Python course. This course can be delivered entirely online. By the end of these activities, students should:
+This repo contains lectures, labs, and other materials for a six-week introductory Python course. This course can be delivered entirely online. By the end of these activities, students should:
 - have a good understanding of the basics of Python, writing code, and software development in general;
 - demonstrate proficiency creating a range of different scripts; and
 - have online examples the show their ability to navigate, comment on, document, and share code.
