@@ -18,7 +18,6 @@ Of course, none of this happens as planned and when you do receive the final sur
 When asked how the survey was collected, the response is, "somebody wrote it up in Word. Jeez, can't you work with that? I thought you were supposed to be "technical."" Oh well. Looks like you're going to need some Python.
 
 **Note**: this is based on not just one, but hundreds of true stories where something just like this happened.
- ___
 
 ## Upload the Survey
 Access the data for the survey in the [data folder accompanying this Github repo](https://github.com/Shadrock/online-python-course/tree/master/Analyzing_a_Survey_Assignment/Data). It may be important to right-click on the link for the file and select "save as." Previously, I've tried opening the data, copying it on screen, then pasting it into a new file... which kept throwing [Unicode errors](http://python-notes.curiousefficiency.org/en/latest/python3/text_file_processing.html#unicode-error-handlers).
@@ -52,7 +51,7 @@ In the code above, note that we've created a variable called `parts` to store th
 # **Inspecting Votes**
 Let's write code that prints only the names of people who voted for Nairobi County. You may find `if vote  == "Nairobi County"` helpful.
 
-Here's on possible solution:
+Here's one possible solution:
 ```Python
 with open("KEcounty_votes.txt") as file:
   for line in file:
@@ -97,10 +96,10 @@ with open("KEcounty_votes.txt") as file:
       count = count + 1
 print(count)
 ```
-___
+
 # **Challenge 1: Write a general function**
 Rewrite the code above as a function where you specify an argument with the name of the county you want to count votes for, and the function returns the number of votes for that particular county. Your code should be well commented to explain what the different parts of the code are doing.
-___
+
 # **Counting All the Votes**
 Counting votes for each county is a bit time consuming, you have to know all the names in advance and you have to loop through the file multiple times. How about if you could automatically find all the varieties that were voted for, and count them all in one pass?
 
@@ -254,7 +253,7 @@ There are two new concepts in the code above:
 `continue` means "stop whatever you were doing and go to the next iteration of the loop". In this case, if the person has already voted then we don’t want to count their invalid vote - instead we `continue` and start the next iteration, with the next vote on the next line of the file.
 
 `counts[vote] += 1` is a shorthand for `counts[vote] = counts[vote] + 1`.
-___
+
 # **Challenge 2: Write a complete script using functions**
 
 At this point, you're code has gone through a _lot_ of iterations and you have all the raw material you need to split your code into functions to make it easier to read. Write a complete script to process the `KEcounty_votes.txt` file with separate functions to:
