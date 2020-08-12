@@ -108,7 +108,8 @@ plt.xticks(x + 0, names, rotation=90)
 ```
 
 After running this code you should see something that looks like this:
---- IMAGE HERE ---
+
+![](images/Python_bar_chart.png)
 
 ## A Few Things to Consider
 In this example, there’s no label on the Y axis showing that it represents the vote count. Can you update your bar graph code so it does this? Take a look at the [ylabel() function in the pyplot documentation](https://matplotlib.org/api/pyplot_api.html#matplotlib.pyplot.ylabel).
