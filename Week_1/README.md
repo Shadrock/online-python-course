@@ -18,7 +18,7 @@ This week's lab is using Python to perform calculations of area.
 
 I also like start the class off with a writing assignment. Writing understandable text about technology, whether for documentation or something else, is a big focus in class. Even if they don’t go on to be professional coders, I want them to be able to speak clearly with coders and about technology. I’ve seen so much jargon-filled nonsense about tech in development that it makes my teeth hurt. The assignment is as follows:
 
-Write a 500 – 1,000 word paper to explain what you think Github is and whether it could be useful in International Development? If you don't know what Github is, do basic desktop research to find out and do your best. Provide footnotes with links or resources that helped you answer these questions. If you already use Github, briefly explain how you've used it and what has been helpful or difficult about learning to use it.
+>Write a 500 – 1,000 word paper to explain what you think Github is and whether it could be useful in International Development? If you don't know what Github is, do basic desktop research to find out and do your best. Provide footnotes with links or resources that helped you answer these questions. If you already use Github, briefly explain how you've used it and what has been helpful or difficult about learning to use it.
 
 Provide details on formatting and submissions as needed.
 
