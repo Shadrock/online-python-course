@@ -1,5 +1,5 @@
 # Lab 1 – Calculations with Python
-To complete this lab you will need to add a `.py` script that contains your code (be sure it is well commented!) and edit this README file.
+To complete this lab you will need to add a script that contains your code (be sure it is well commented!) and edit this README file. You can save your Colab directly as an `.ipynb` file or, if you're using a different code editor, save it as a `.py` file.
 
 You can write your script using whatever tolls you like, but it must include a comment block at the top with the following information:
 - Name:
