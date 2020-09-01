@@ -27,7 +27,7 @@ Use `if/elif/else` structure to classify the input numerical values into one of 
 
 ## Script 2 - Create your first chatbot!
 
-The internet is full of amazing "intelligent" [chatbots](https://en.wikipedia.org/wiki/Chatbot) that use things like neural networks to train their chatbots to talk like a certain person: many of these chatbot applications are written in Python. Simple chatbots follow [decision trees](https://www.dummies.com/programming/python/using-nested-decision-statements-python/) by looking for specific keywords using things like `if, elif, else` statements. Some chatbots may use `input()` to capture input from a user, including numbers.
+The internet is full of amazing "intelligent" [chatbots](https://en.wikipedia.org/wiki/Chatbot) that use things like [neural networks](https://arstechnica.com/science/2019/12/how-neural-networks-work-and-why-theyve-become-a-big-business/) to talk like a certain person: many of these chatbot applications are written in Python. Simple chatbots follow [decision trees](https://www.dummies.com/programming/python/using-nested-decision-statements-python/) by looking for specific keywords using things like `if, elif, else` statements. Some chatbots may use `input()` to capture input from a user, including numbers.
 
 Write a chat bot that *either* uses `if, elif, else` to respond back to the user *or* collects a number from the user then employs [type conversion](https://www.digitalocean.com/community/tutorials/how-to-convert-data-types-in-python-3) to change the number (remember that `input()` only returns string values) and perform some sort of computation. 
 
