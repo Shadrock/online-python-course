@@ -14,7 +14,7 @@ You should edit your README file to provide the following information:
 Remember that you are encouraged to look for answers online! Stackoverflow, other Github repositories, or Python documentation are all good places to start.
 
 ## Script 1 - Classifying Data
-You will a function, called “feelTemp”, that converts a given temperature (in Fahrenheit) into four categorical levels, hot, warm, cool, and cold using the following criteria:
+Write a function, called “feelTemp”, that converts a given temperature (in Fahrenheit) into four categorical levels, hot, warm, cool, and cold using the following criteria:
 
 - If the temperature is 100 or above, the functions return “It is hot.”;
 - If the temperature is between 70 and 100, the function returns “It is warm.”;
