@@ -45,5 +45,7 @@ If you're feeling really motivated, you can write a script that combines the two
 - If the function is run using the name `Shashank` as an argument the computer will display: "Hi, Shashank!"
 - ... or `else` if the function is run using another `name` the computer will display "Hi, `name`. I don't believe we've met yet."
 
+Once you know what you want the inputs and outputs of your code to be, based on the script, you can start. 
+Happy coding!
 
 
