@@ -31,4 +31,4 @@ cur_weather_conditions = cur_weather_conditions.text
 
 # Final Output
 # Return scraped information
-print 'The Current Weather Conditions at '+ lat +  ", " + lon + " is:" + cur_weather_conditions
+print('The Current Weather Conditions at '+ lat +  ", " + lon + " is:" + cur_weather_conditions)
