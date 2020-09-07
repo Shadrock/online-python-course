@@ -29,6 +29,6 @@ This will launch the Inspector window that helps locate different elements on th
 
 The script returns the current weather conditions for Worcester, MA (Lat: 42.2634, Lon: -71.8022) with the latitude and longitude information provided in the script. Using the latitude and longitude values, it generates the following URL through string concatenation: https://forecast.weather.gov/MapClick.php?lat=42.2634&lon=-71.8022
 
-**Edit the Web Scrapping script to do the following:**
+**Edit the Web Scraping script to do the following:**
 - Edit the `lat` and `lon` variables with latitude and longitude (in decimal degrees) for a city of your choice. Note that the city must be located in the United States. If latitude/longitude for a city that is outside the U.S. is specified, the page will return an error. You can find the latitude and longitude for a place of interest through this online geocoder: https://www.latlong.net/
 - In the web-page, find the `id` element that contains the Humidity, Wind Speed, Barometer, Dewpoint, Visibility and Last Updated information. Edit line #35 in the script to scrape this `id` element. The final output for the script should include the Humidity, Wind Speed, Barometer, Dewpoint, Visibility and Last Updated information for the selected city.
