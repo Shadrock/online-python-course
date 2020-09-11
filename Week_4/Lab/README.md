@@ -39,6 +39,7 @@ Note: there is a method called "capitalize." The syntax for it is `'macdonald'.c
 > 
 > Sunday: Mostly Sunny, High: 71 F
 
+**Part 3**
 Write code to extract the latitude and longitude from the URL in `exercise3.py`. Output should be text that reads:
 Latitude: 42.2509428
 Longitude: -71.8249939
