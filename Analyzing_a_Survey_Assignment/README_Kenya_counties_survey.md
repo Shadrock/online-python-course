@@ -216,7 +216,7 @@ You’ll need to apply the same data munging techniques to clean up people’s n
 Below is one possible solution.
 
 ```python
-# Create an empty dictionary for associating radish names with vote counts
+# Create an empty dictionary for associating county names with vote counts
 counts = {}
 
 # Create an empty list with the names of everyone who voted
