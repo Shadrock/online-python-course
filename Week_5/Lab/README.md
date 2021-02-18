@@ -1,7 +1,7 @@
 # Lab 5 – Refugee Stats using Dictionaries
 To complete this lab you will need to add a `.py` script that contains your code (be sure it is well commented!) and edit this README file.
 
-You can write your script using whatever tolls you like, but it must include a comment block at the top with the following information:
+You can write your script using whatever tools you like, but it must include a comment block at the top with the following information:
 - Name:
 - Date created:
 - Version of Python you are using
