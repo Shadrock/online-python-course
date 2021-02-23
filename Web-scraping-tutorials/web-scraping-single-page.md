@@ -27,7 +27,7 @@ The exercises in this class all use web sites that specifically allow scraping, 
 
 The Python code below was created using Google Colab, so some of the code may differ slightly if you are working in a different environment.
 
-## Setting Up the Environment
+## Setting Up the Environment & Our First Scrape
 There are three libraries that we'll import to help us scrape. They are: beautiful soup (`bs4`), `requests`, and `lmxl`. [Requests](https://requests.readthedocs.io/en/master/) is a library that makes it much easier for your code to request information over the Internet. [Beautiful Soup](https://www.crummy.com/software/BeautifulSoup/bs4/doc/) is used for pulling data out of HTML and XML files, while [lmxl](https://lxml.de/) is used for easy handling of HTML and XML files and will be used as a parameter when we use the requests library.
 
 Google Colab comes with a wide range of libraries already installed. You can check to see if libraries are installed using the following code:
@@ -50,7 +50,7 @@ Once that's done, you need to import the following.
 import requests
 import bs4
 ```
-Now we'll check to make sure everything is set up. We'll see if we can make a request and grab the code for the website http://example.com, which we are free to scrap. Rune the following:
+Now we'll check to make sure everything is set up. We'll see if we can make a request and grab the code for the website http://example.com, which we are free to scrap. Run the following code:
 ```Python
 result = requests.get("http://example.com/")
 ```
@@ -74,7 +74,7 @@ soup = bs4.BeautifulSoup(result.text, "lxml") # arguments here include what we'r
 # Calling the soup shows how our parser has nicely organized the html as a "soup object" so we can see the different page elements.
 soup
 ```
-You should now see something much more structured, which might look like:
+If you're not using Colab or a Jupyter notebook environment, you might need to use `print(soup)` instead of just running a code cell with `soup`. Either way, you should now see something much more structured, which might look like:
 ```
 <!DOCTYPE html>
 <html>
@@ -85,13 +85,53 @@ You should now see something much more structured, which might look like:
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <style type="text/css">
 ```
+You can see that there are HTML "tags" in the code for this page and that these tag correspond to different elements of the page. For instance, `<title>` tells us the words "Example Domain" are the title for the page. Creating a "soup object" and using `.select` to get the element you want is a big part of scraping.  Figuring out what string syntax to pass into the `soup.select()` method is the tricky bit. Try grabbing some raw HTML elements with the following code.
 
+```Python
+# Grab some raw HTML elements by default this will return a list that includes the tags
+soup.select('title')
+```
+Looking good so far... but we want the text, not the tags! We'll use the select method, then specify the index place we want to work on, which is `0` since there's only one Title, then get text
 
+```Python
+# use the select method, specify the index - 0 since there's only one, then get text.
+soup.select('title')[0].getText()
+```
+Your output for this should simply be the string `'Example Domain'`. Can you now use what you've learned to select a paragraph (the HTML tag is `<p>`), and strip off the HTML tags so that you are left with the paragraph text as a string value?
 
+It's helpful to know how to grab all the elements of a class. Here's example syntax and what the matching result would be.
+- `soup.select('div')` - all elements w/ "div" tag.
+- `soup.select('#some_id')` - elements containing id = 'some_id'
+- `soup.select('.some_class')` - elements containing class = 'some_class'
+- `soup.select('div span')` - Any elements named 'span' within a div element.
+- `soup.select('div > span')` - Any elements named span **directly** within a div element, with nothing in between.
 
+## Scraping Content from Wikipedia
+Now that we've got the basics of web scraping down, let's head over the Wikipedia and try to scrape more than just one thing.  Start by heading over to to Wikipedia to look at the source code. The easiest way to do this is to right-click on the page and select "Inspect element" then focus in on specific aspects of the page. We've gone over this in class, but [here's a good blog post refresher if you need it](https://blog.devmountain.com/how-to-use-inspect-element-jump-into-what-makes-a-web-page-tick/#:~:text=What%20Is%20Inspect%20Element%3F,code%20behind%20the%20web%20content.).
 
+We'll start on this page dedicated to Ada Lovelace, the person who wrote the first computer program (back in the 1840s!): https://en.wikipedia.org/wiki/Ada_Lovelace. Our goal is to scrape the entire table of contents ("toc"); keeping on the text and not the HTML tags. So I'll start by highlighting some of the elements in the table of contents to see what the code looks like. Here's what this looked like for me using Chrome.
+>![screenshot](images/toctext.png)
 
-Go to Wikipedia and look at source code. The easiest way to do this is to right-click on the page and select "View page source". [This web page provides instructions for the specifics of each browser](https://www.computerhope.com/issues/ch000746.htm).
+Having inspected the code in the table of contents section of the page, we can see that there is a `class="toctext"`. This is what we want to scrape.
 
- https://en.wikipedia.org/wiki/Jonas_Salk. Inspect element of the image.
-We'll begin by grabbing a page title.  
+We'll start with our request:
+```Python
+res = requests.get('https://en.wikipedia.org/wiki/Ada_Lovelace')
+```
+then make our soup.
+```Python
+# make our soup object
+ada_soup = bs4.BeautifulSoup(res.text, "lxml")
+```
+You can check to make sure your soup is made... but it might be quite long!
+```Python
+# You can check the soup - this will be long!
+ada_soup
+```
+Now, using our guide above, we'll grab all the elements of a class. We know there is a `class="toctext"` that we want to scrape. In other words, we want all elements containing `class="toctext"`. We'll run the following code to do this.
+
+```Python
+ada_soup.select('.toctext')
+```
+
+The output for this will be a rather long list of all the elements in the table of contents along with their HTML tags. The first part of this list will be `<span class="toctext">Biography</span>`.
