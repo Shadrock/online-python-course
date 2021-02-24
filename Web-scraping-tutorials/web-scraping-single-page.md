@@ -133,5 +133,42 @@ Now, using our guide above, we'll grab all the elements of a class. We know ther
 ```Python
 ada_soup.select('.toctext')
 ```
-
 The output for this will be a rather long list of all the elements in the table of contents along with their HTML tags. The first part of this list will be `<span class="toctext">Biography</span>`.
+
+Here, we'll repeat the process we did to remove the tags from the title element, above. We'll do this just to make sure we have the right code to remove the tags before writing a script that will do them all at once -  this is called 'incremental development!'
+
+```Python
+# Let's grab and inspect the first item
+first_item = ada_soup.select('.toctext')[0]
+```
+...check to make sure we have the the first item.
+
+```Python
+first_item # could also use print(first_item)
+```
+```Python
+# Now lets grab just the text from that first item: not HTML code.
+first_item.text
+```
+The output for this should be the string value of `Biography` , or whatever the first section/title of the table of contents is. Our challenge now, is to write the script so that it goes through each item in the `toctext` and removes the tags. In this case, we'll use a "for loop" to iterate through all the items and perform the same action on them.
+
+```Python
+# Iterate through all the items and print only text
+for item in ada_soup.select('.toctext'):
+  print(item.text)
+```
+Once you've run that code, you should see a return of all the sections of the table of contents without the tags. Congratulations, you've successfully scraped all the elements from the `toctext` class!
+
+## Scraping images
+Now let's grab an image. Although we generally grab images from the web by clicking on them and saving them, we're going to scrape one using Python. This may seem like the longer way of doing things, but this exercise will greatly improve our web scraping skills by getting us more familiar with identifying things we want to scrape and parsing them, and writing them as files using code.
+
+Images on a website typically have their own URL link ending in `.jpg` or `.png`, which are the file formats they are in. Beautiful soup can scan a page, note the `<img>` tags (used by HTML), then grab the URLs, which can be used to download images to be saved to our computer.
+
+Always be sure you check the licensing of images you plan to use on the web. We're using a Wikipedia page here since *most* images are covered under a open source license. See [more info about images on Wikipedia here](https://en.wikipedia.org/wiki/Wikipedia:Ten_things_you_may_not_know_about_images_on_Wikipedia).
+
+So what are we going to do?
+1. Make a request.
+2. Turn it into a soup.
+3. Inspect the images to see what classes or element tags we need to look for.
+
+Since she's currently somebody doing more work than anybody for democracy in America, let's get the images from [the page on Stacy Abrams](https://en.wikipedia.org/wiki/Stacey_Abrams)!
