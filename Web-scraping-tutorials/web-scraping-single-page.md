@@ -109,7 +109,7 @@ It's helpful to know how to grab all the elements of a class. Here's example syn
 ## Scraping Content from Wikipedia
 Now that we've got the basics of web scraping down, let's head over the Wikipedia and try to scrape more than just one thing.  Start by heading over to to Wikipedia to look at the source code. The easiest way to do this is to right-click on the page and select "Inspect element" then focus in on specific aspects of the page. We've gone over this in class, but [here's a good blog post refresher if you need it](https://blog.devmountain.com/how-to-use-inspect-element-jump-into-what-makes-a-web-page-tick/#:~:text=What%20Is%20Inspect%20Element%3F,code%20behind%20the%20web%20content.).
 
-We'll start on this page dedicated to Ada Lovelace, the person who wrote the first computer program (back in the 1840s!): https://en.wikipedia.org/wiki/Ada_Lovelace. Our goal is to scrape the entire table of contents ("toc"); keeping on the text and not the HTML tags. So I'll start by highlighting some of the elements in the table of contents to see what the code looks like. Here's what this looked like for me using Chrome.
+We'll start on this page dedicated to Ada Lovelace, the person who wrote the first computer program (back in the 1840s!): https://en.wikipedia.org/wiki/Ada_Lovelace. Our goal is to scrape the entire table of contents ("toc"); keeping only the text and not the HTML tags. So I'll start by highlighting some of the elements in the table of contents to see what the code looks like. Here's what this looked like for me using Chrome.
 >![screenshot](images/toctext.png)
 
 Having inspected the code in the table of contents section of the page, we can see that there is a `class="toctext"`. This is what we want to scrape.
