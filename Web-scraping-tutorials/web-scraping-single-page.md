@@ -46,11 +46,11 @@ If you need to install the libraries you can use:
 ```
 Once that's done, you need to import the following.
 ```Python
-# install libraries
+# importing libraries
 import requests
 import bs4
 ```
-Now we'll check to make sure everything is set up. We'll see if we can make a request and grab the code for the website http://example.com, which we are free to scrap. Run the following code:
+Now we'll check to make sure everything is set up. We'll see if we can make a request and grab the code for the website http://example.com, which we are free to scrape. Run the following code:
 ```Python
 result = requests.get("http://example.com/")
 ```
@@ -88,18 +88,21 @@ If you're not using Colab or a Jupyter notebook environment, you might need to u
 You can see that there are HTML "tags" in the code for this page and that these tag correspond to different elements of the page. For instance, `<title>` tells us the words "Example Domain" are the title for the page. Creating a "soup object" and using `.select` to get the element you want is a big part of scraping.  Figuring out what string syntax to pass into the `soup.select()` method is the tricky bit. Try grabbing some raw HTML elements with the following code.
 
 ```Python
-# Grab some raw HTML elements by default this will return a list that includes the tags
+# Grab some raw HTML elements: by default this will return a list that includes the tags
 soup.select('title')
 ```
-Looking good so far... but we want the text, not the tags! We'll use the select method, then specify the index place we want to work on, which is `0` since there's only one Title, then get text
+Looking good so far... but we want the text, not the tags! We'll use the select method, then specify the index place we want to work on, which is `0` since there's only one Title, then get text.
 
 ```Python
 # use the select method, specify the index - 0 since there's only one, then get text.
 soup.select('title')[0].getText()
 ```
-Your output for this should simply be the string `'Example Domain'`. Can you now use what you've learned to select a paragraph (the HTML tag is `<p>`), and strip off the HTML tags so that you are left with the paragraph text as a string value?
+Your output for this should simply be the string `'Example Domain'`.
 
-It's helpful to know how to grab all the elements of a class. Here's example syntax and what the matching result would be.
+### Coding challenge
+Now, can you use what you've learned to select a paragraph (the HTML tag is `<p>`) and strip off the HTML tags so that you are left with the paragraph text as a string value?
+
+*For future reference*, it's helpful to know how to grab all the elements of a class. Here's example syntax and what the matching result would be.
 - `soup.select('div')` - all elements w/ "div" tag.
 - `soup.select('#some_id')` - elements containing id = 'some_id'
 - `soup.select('.some_class')` - elements containing class = 'some_class'
