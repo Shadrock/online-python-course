@@ -174,4 +174,113 @@ So what are we going to do?
 2. Turn it into a soup.
 3. Inspect the images to see what classes or element tags we need to look for.
 
-Since she's currently somebody doing more work than anybody for democracy in America, let's get the images from [the page on Stacy Abrams](https://en.wikipedia.org/wiki/Stacey_Abrams)!
+Since she's currently somebody doing more work than anybody for democracy in America, let's get the images from [the page on Stacy Abrams](https://en.wikipedia.org/wiki/Stacey_Abrams)! As with scraping text, we'll start with a `request`, make our "soup", then parse it out to make sure we're able to scrape.
+
+```Python
+# make a fresh request for the page content
+res = requests.get("https://en.wikipedia.org/wiki/Stacey_Abrams")
+```
+
+```Python
+# Now, make our soup.
+soup = bs4.BeautifulSoup(res.text, 'lxml')
+```
+
+```Python
+soup # run this to get a structured output of HTML code.
+```
+
+Now that we've done that, we need to figure out what we're going to pass into `soup.select()`. Using the developer tools to inspect an element on the page, we can see that most images are associated with an `<img>` tag, so let's try that.
+```Python
+# img is an element tag, not a class or id, so we don't need to worry about hashtags or periods.
+soup.select('img')
+```
+If this is successful, that output should be a **list** with all the images listed starting with something that looks like this:
+```
+<img alt="Page semi-protected" data-file-height="512" data-file-width="512" decoding="async"...
+```
+Let's have a look at that first one by selecting it using it's index place in a list.
+
+```Python
+# Let's explore our results by looking at the first one
+soup.select('img')[0]
+```
+The output should be a string of HTML code with a bunch of tags associated with that first image. It should look something like this:
+
+```
+<img alt="Page semi-protected" data-file-height="512" data-file-width="512" decoding="async" height="20" src="//upload.wikimedia.org/wikipedia/en/thumb/1/1b/Semi-protection-shackle.svg/20px-Semi-protection-shackle.svg.png" srcset="//upload.wikimedia.org/wikipedia/en/thumb/1/1b/Semi-protection-shackle.svg/30px-Semi-protection-shackle.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/1/1b/Semi-protection-shackle.svg/40px-Semi-protection-shackle.svg.png 2x" width="20"/>
+```
+What we want to look at here is the `src=` tag, which shows us the URL. We can then copy that URL and paste it into a browser. In the case above, the URL is, `upload.wikimedia.org/wikipedia/en/thumb/1/1b/Semi-protection-shackle.svg/20px-Semi-protection-shackle.svg.png`. When we look at this we see a small lock... that's not a photo of Stacy! Can you find the lock on [the original page](https://en.wikipedia.org/wiki/Stacey_Abrams)?
+
+So, while parsing our soup on `img` tags *does* result in images... we don't want them all. There can be all kinds of images in a web page: small icons, empty images included for layout purposes, the Wikipedia logo, etc. etc.
+
+Let's try and get images *within* the article... not everywhere on the web page. Let's inspect the images again and try to hone in on classes or ids of these images.
+
+There is something in the web page code that looks like it might be of interest... `class = "thumbimage"`. Let's have a look at just those.
+
+```Python
+# Because we're parsing a class, we'll want the . in our argument
+soup.select('.thumbimage')
+```
+This returned 4 links, all of which are of the class `thumbimage` which is great! If we scroll through the original page, we see there are four images in the article. Again, you can check by copying/pasting the `src` from one of the images into your browser.
+
+Now that we have those, let's see how to download the images. We'll start by creating a variable for the first image in the set.
+
+```Python
+stacy_1 = soup.select('.thumbimage')[0]
+```
+```Python
+stacy_1 #run this to make sure have the right image.
+```
+Now we want to get the `src` information from within this. Remember that our new object, `stacy_1` is a "[tag object](https://www.crummy.com/software/BeautifulSoup/bs4/doc/#kinds-of-objects)", which holds all the HTML *tags* with their associated values. So we can kind of treat `stacy_1` as a dictionary (remember key/value pairs)! Try calling a few values.
+
+```Python
+# call different tags in the stacy_1 tag object
+stacy_1['class']
+```
+```Python
+stacy_1['src'] # this will return the URL we want as a string.
+```
+Now, make a new request based on the src url, being sure to add https: to the URL.
+
+```Python
+image_link = requests.get("https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Stacey_abrams_at_protest.jpg/220px-Stacey_abrams_at_protest.jpg")
+```
+Now we're going to show the image link using a "content" attribute. This will show the image in it's raw form. This isn't readable by humans, but it can be read by Python and it is the raw code of the image that we'll use to write and download a copy of the image.
+```Python
+# show the image link using a "content" attribute.
+image_link.content
+```
+
+The output for this will look something like:
+```
+b'\xff\xd8\xff\xdb\x00C\x00\x04\x03\x03\x04
+```
+Now that we've scraped the raw image from the web, we need to write it to a new file and save it locally.
+
+### Writing a new file
+Creating a new `jpg` image requires that we open a new file, write to it, and then close it.
+
+```Python
+# Create a new file name (add .jpg or whatever matches the ned of your URL) to which we will write the file
+# I'm using the variable "f" for "file"
+f = open('my_stacy_image1.jpg', 'wb') # wb denotes "write binary"
+```
+```Python
+# now we'll write all that binary content to the file. This should return some integer
+f.write(image_link.content)
+```
+```Python
+# now we close the file.
+f.close()
+```
+
+So far, we've created the `jpg` file, written the raw code of the image to it, and closed it. However, it's sitting on our virtual colab workspace. So let's import our files, then download the image locally.
+
+```Python
+from google.colab import files
+files.download('my_stacy_image1.jpg')
+```
+Now check the downloads folder on your computer. Congratulations: you've just written a file and downloaded it to your downloads folder using Python!
+
+Now that we've walked through the details of web-scraping, we can move on to scraping multiple pages at once in our next tutorial. 
