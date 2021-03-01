@@ -14,7 +14,7 @@ They should also do some reading to familiarize themselves with the “open sour
 - Read contrasting views on open source technology in international development in [this ICTWorks blog post](https://www.ictworks.org/how-can-open-source-software-be-sustainable-in-international-development/#.XLVJJpNKiF0) and [this Devresults blog post]( https://blog.devresults.com/the-revolution-will-not-be-open-source/)
 
 ## Lab / Assignments
-The lab this week uses `if/elif/else` to classify data. There is also another writing assignment, as follows:
+The lab this week uses `if/elif/else` to classify data and also uses this logic to build a chatbot. There is also another writing assignment, as follows:
 
 >Write between 1,000 - 1,500 words to discuss open source software in international development and humanitarian settings and / or the role of things like "big data" in development and humanitarian settings. You should also discuss how it might relate to your given field. You should reference readings we have had in class; the additional readings below; and at least two other sources. Specific themes you should address are: what is "open source" and "big data" (how are these things defined); describe benefits, challenges, or both that they create in development or humanitarian settings, as well as your field. There is no right answer here: I want you to process what we've read, find some new material, and offer your thoughts with clear arguments. You should present at least one real or imagined example to illustrate your argument.
 
