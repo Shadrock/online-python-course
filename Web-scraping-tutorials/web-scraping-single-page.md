@@ -246,7 +246,7 @@ Now, make a new request based on the src url, being sure to add https: to the UR
 ```Python
 image_link = requests.get("https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Stacey_abrams_at_protest.jpg/220px-Stacey_abrams_at_protest.jpg")
 ```
-Now we're going to show the image link using a "content" attribute. This will show the image in it's raw form. This isn't readable by humans, but it can be read by Python and it is the raw code of the image that we'll use to write and download a copy of the image.
+Now we're going to show the image link using a "content" attribute. This will show the image in its raw form. This isn't readable by humans, but it can be read by Python and it is the raw code of the image that we'll use to write and download a copy of the image.
 ```Python
 # show the image link using a "content" attribute.
 image_link.content
@@ -283,4 +283,10 @@ files.download('my_stacy_image1.jpg')
 ```
 Now check the downloads folder on your computer. Congratulations: you've just written a file and downloaded it to your downloads folder using Python!
 
-Now that we've walked through the details of web-scraping, we can move on to scraping multiple pages at once in our next tutorial. 
+# What to Submit
+
+In this tutorial we've written - step by step - instructions to scrape text and images from a Wikipedia page with successive lines of code appearing in new code blocks. Choose one of these (either scraping text or images) and convert the step by step lines of code into a single code block, including a good comment header and in-line comments. Your code should scrape a _different_ Wikimedia page for text or images than the pages we've used here. So, although you can simply re-use the code you created from the tutorial, you will need to change the URLs, and potentially the tags/elements that you're scraping. You will also need to remove the lines we used for incremental development! Those lines where we called (or printed) some variable or output just to check that we were getting results aren't needed.
+
+When you are done, submit your notebook - the code should be in a single block or code cell so it can be run all at once - in a Github repository from your _personal account_. The`README` file in your repository should briefly explain what your code does and specify any inputs and outputs required. Feel free to add other explanation as necessary, such as any problems you encountered and how you debugged them, any interesting insights you gained from the tutorial, etc.
+___
+Now that we've walked through the details of web-scraping, our next tutorial will cover scraping multiple pages at once.
