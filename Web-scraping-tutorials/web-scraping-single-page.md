@@ -153,7 +153,7 @@ first_item # could also use print(first_item)
 # Now lets grab just the text from that first item: not HTML code.
 first_item.text
 ```
-The output for this should be the string value of `Biography` , or whatever the first section/title of the table of contents is. Our challenge now, is to write the script so that it goes through each item in the `toctext` and removes the tags. In this case, we'll use a "for loop" to iterate through all the items and perform the same action on them.
+The output for this should be the string value of `Biography` , or whatever the first section/title of the table of contents is. Our challenge now, is to write the script so that it goes through each item in the `toctext` and removes the tags. In this case, we'll use a "[for loop](https://wiki.python.org/moin/ForLoop)" to iterate through all the items and perform the same action on them.
 
 ```Python
 # Iterate through all the items and print only text
