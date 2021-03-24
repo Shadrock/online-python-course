@@ -34,7 +34,7 @@ import bs4
 
 Now let's see what we're working with. The main page shows that there are 1000 books in the store. And that each page only shows 20 of those... there are 50 pages. So we'll probably need to loop through each of the pages since everything isn't on one page.
 
-We'll start by understanding what happens to the URL as a user clickes from one page to the next. Let's copy/paste the URL from the first to pages to compare them:
+We'll start by understanding what happens to the URL as a user clicks from one page to the next. Let's copy/paste the URL from the first to pages to compare them:
 
 The URL from the first page is: `http://books.toscrape.com/catalogue/page-1.html`
 The URL from the second page is: `http://books.toscrape.com/catalogue/page-2.html`
@@ -50,18 +50,16 @@ Then we'll test this by passing an argument and running one page. I'm using `20`
 ```Python
 base_url.format('20')
 ```
-When you run this, you should get a strong that shows the URL for the page you passed. In my case the output is `http://books.toscrape.com/catalogue/page-20.html`.
+When you run this, you should get a string that shows the URL for the page you passed. In my case the output is `http://books.toscrape.com/catalogue/page-20.html`.
 
-From here, there are a few ways we could proceed. One way would be to set up variables for each page number and pass those. The output of the code below should be similar to the above: a string value with the page you passed in the correct place in the URL.
+From here, there are a few ways we could proceed. One way would be to set up variables for each page number and pass those. The output of the code below should be similar to the above: a string value with the page you passed in the correct place in the URL. Try running the following:
 ```Python
 page_num = 15
 base_url.format(page_num)
 ```
 This allows us to go to any particular page we like. So it can be used as part of our loop in order to go through the pages. But how do we scrape through each page to find the 5 star rating?
 
-Let's inspect some star ratings using developer tools. Can you find `class = "icon star"`? What class exists above that? Is there a class for star ratings?
-
-We're also looking for titles. It looks like there's a `class="product_pod"` that holds all the information for a book: price, title, whether it's in stock, and the rating! So if we grab that class, we can parse out all the information we need!
+Let's inspect some star ratings using developer tools. Can you find `class = "icon star"`? What class exists above that? Is there a class for star ratings? We're also looking for titles. It looks like there's a `class="product_pod"` that holds all the information for a book: price, title, whether it's in stock, and the rating! So if we grab that class, we can parse out all the information we need!
 
 Now that we have a target to scrape, it's time to make a request, make our soup, and select that pod class.
 ```Python
@@ -83,10 +81,12 @@ soup.select(".product_pod")
 If you look at the output from the last step, you should a series of code HTML code blocks that all look similar and contain things like `<i class="icon-star"></i>` and other product information. As a quick check to make sure our code is running we can check the length of our soup selection. Since there are 20 books per page, and each one has a product pod class, the output from the following code should be `20`.
 
 ```Python
+# Run this as a test to make sure our code is delivering the output we expect.
 len(soup.select(".product_pod"))
 ```
 Now we need to figure out what code will allow us to grab a title associated with a 5 star rating. Since the output of `(soup.select(".product_pod")` is basically a list of all the different things (star review, title, etc.) lets start by setting it up as a list called `products` then start by grabbing the first item in `products` to start creating our code.
 ```Python
+#Run this to get our pod.
 products = soup.select(".product_pod")
 ```
 We'll use an example to get our code going. If it works with one example - that we'll creatively call `example`, then we can expand our code.
@@ -154,7 +154,7 @@ Running the above code should result in an list similar to this:
 So it looks like we do have a three star rating! Taking this test further, we can check to see if there is a 5 star rating in our example. We know there isn't one, so we would expect to get an empty list.
 
 ```Python
-example.select(".star-rating.Five")
+example.select(".star-rating.Five") # this should output an empty list.
 ```
 
 So another way to check for 5 star ratings would be to use this method by checking if an empty list is the equivalent to the star rating. This will return a boolean.
@@ -162,7 +162,7 @@ So another way to check for 5 star ratings would be to use this method by checki
 [] == example.select(".star-rating.Five")
 ```
 
-Now that we know how to check our rating. Let's figure out how to grab a title. Inspecting our example, we see a `title` tag which is held within a `<a href>` tag. Let's run the following code:
+Now that we know how to check our rating, let's figure out how to grab a title. Inspecting our example, we see a `title` tag which is held within a `<a href>` tag. Let's run the following code:
 ```Python
 example.select('a')
 ```
@@ -171,7 +171,7 @@ The output should look something like:
 [<a href="a-light-in-the-attic_1000/index.html"><img alt="A Light in the Attic" class="thumbnail" src="../media/cache/2c/da/2cdad67c44b002e7ead0cc35693c0e8b.jpg"/></a>,
  <a href="a-light-in-the-attic_1000/index.html" title="A Light in the Attic">A Light in the ...</a>]
 ```
-Looks like this returns two `a` tags. Looking at the first one, it looks like it contains an `img` while the second one contains the `title` we're looking for. So for each product, we want to the second `a` tag, which would be index space 1. Since we're using the `select` method in beautiful soup, we can also ask for the tag to get the associated value.
+Looks like this returns a list with two `a` tags. Looking at the first one, it looks like it contains an `img` while the second one contains the `title` we're looking for. So for each product, we want the second `a` tag, which would be index space 1. Since we're using the `select` method in beautiful soup, we can also ask for the tag to get the associated value.
 
 ```Python
 example.select('a')[1]['title']
@@ -179,8 +179,9 @@ example.select('a')[1]['title']
 The output is `A Light in the Attic`. That's great, our code is working! Not only that, but this is a fantastic book, which you should definitely check out if you haven't already.
 
 So let's block in what we want our code to do by combining our ideas.
-- We want to check if something is 5 star by doing a string call in, `example.select(rating))`.
-- Then we can also grab the book title using `example.select('a')[1]['title']`.
+- We want to iterate through a range of 50 pages. Probably best to just use a `for` loop with `range`.
+- We want to check if something is 5 star rating by using, `.select(rating))`.
+- Then we can also grab the book title using `.select('a')[1]['title']`.
 
 Ok. I think we're ready to build our scraper.
 
