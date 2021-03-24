@@ -31,7 +31,7 @@ To get started, import your libraries!
 import requests
 import bs4
 ```
-## Understanding what to scrape
+## Understanding What to Scrape
 Now let's see what we're working with. The main page shows that there are 1000 books in the store. And that each page only shows 20 of those... there are 50 pages. So we'll probably need to loop through each of the pages since everything isn't on one page.
 
 We'll start by understanding what happens to the URL as a user clicks from one page to the next. Let's copy/paste the URL from the first to pages to compare them:
@@ -85,7 +85,7 @@ If you look at the output from the last step, you should a series of code HTML c
 # Run this as a test to make sure our code is delivering the output we expect.
 len(soup.select(".product_pod"))
 ```
-## Extracing Rating & Title Data
+## Extracting Rating & Title Data
 Now we need to figure out what code will allow us to grab a title associated with a 5 star rating. Since the output of `(soup.select(".product_pod")` is basically a list of all the different things (star review, title, etc.) lets start by setting it up as a list called `products` then start by grabbing the first item in `products` to start creating our code.
 ```Python
 #Run this to get our pod.
