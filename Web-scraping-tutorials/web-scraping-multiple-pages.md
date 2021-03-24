@@ -31,7 +31,7 @@ To get started, import your libraries!
 import requests
 import bs4
 ```
-
+## Understanding what to scrape
 Now let's see what we're working with. The main page shows that there are 1000 books in the store. And that each page only shows 20 of those... there are 50 pages. So we'll probably need to loop through each of the pages since everything isn't on one page.
 
 We'll start by understanding what happens to the URL as a user clicks from one page to the next. Let's copy/paste the URL from the first to pages to compare them:
@@ -61,6 +61,7 @@ This allows us to go to any particular page we like. So it can be used as part o
 
 Let's inspect some star ratings using developer tools. Can you find `class = "icon star"`? What class exists above that? Is there a class for star ratings? We're also looking for titles. It looks like there's a `class="product_pod"` that holds all the information for a book: price, title, whether it's in stock, and the rating! So if we grab that class, we can parse out all the information we need!
 
+## Making Our Soup
 Now that we have a target to scrape, it's time to make a request, make our soup, and select that pod class.
 ```Python
 # Make our request
@@ -84,6 +85,7 @@ If you look at the output from the last step, you should a series of code HTML c
 # Run this as a test to make sure our code is delivering the output we expect.
 len(soup.select(".product_pod"))
 ```
+## Extracing Rating & Title Data
 Now we need to figure out what code will allow us to grab a title associated with a 5 star rating. Since the output of `(soup.select(".product_pod")` is basically a list of all the different things (star review, title, etc.) lets start by setting it up as a list called `products` then start by grabbing the first item in `products` to start creating our code.
 ```Python
 #Run this to get our pod.
@@ -177,6 +179,8 @@ Looks like this returns a list with two `a` tags. Looking at the first one, it l
 example.select('a')[1]['title']
 ```
 The output is `A Light in the Attic`. That's great, our code is working! Not only that, but this is a fantastic book, which you should definitely check out if you haven't already.
+
+## Building Our Scraper
 
 So let's block in what we want our code to do by combining our ideas.
 - We want to iterate through a range of 50 pages. Probably best to just use a `for` loop with `range`.
